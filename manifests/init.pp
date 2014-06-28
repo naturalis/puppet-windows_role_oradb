@@ -36,46 +36,36 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class windows_role_oradb  (
-  $installdb_hash = {'nbcprod' => { # General parameters
+  $installdb_hash = {'nbcprod' => { # General
                                     version         => '11.2.0.3',
                                     #archiveFilename => 'p10404530_112030_MSWIN-x86-64',
                                     installFolder   => 'C:/Install',
                                     zipfilesFolder  => 'C:/Zipfiles',
 
-                                    # Response file parameters
-                                    oracleHome      => 'C:\Oracle_Sys\nbcprod\product\11.2.0\db',
-                                    oracleBase      => 'C:\Oracle_Sys\nbcprod',
-                                    databaseType    => 'SE',
+                                    # Responsefile
+                                    oracleHome   => 'C:\Oracle_Sys\nbcprod\product\11.2.0\db',
+                                    oracleBase   => 'C:\Oracle_Sys\nbcprod',
+                                    databaseType => 'SE',
                                   },
                     },
 
-  $database_hash  = {'nbcprod' => { oracleBase              => 'C:/Oracle_Sys',
-                                    oracleHome              => 'C:/Oracle_Sys/product/11.2.0/db',
-                                    user                    => 'oracle',
-                                    group                   => 'dba',
-                                    downloadDir             => 'C:/Install',
-                                    action                  => 'create',
-                                    dbName                  => 'nbcprod',
-                                    dbDomain                => 'nnm.local',
-                                    sysPassword             => 'Welcome01',
-                                    systemPassword          => 'Welcome01',
-                                    dataFileDestination     => "/oracle/oradata",
-                                    recoveryAreaDestination => "/oracle/flash_recovery_area",
-                                    characterSet            => "AL32UTF8",
-                                    nationalCharacterSet    => "UTF8",
-                                    initParams              => "open_cursors=1000,processes=600,job_queue_processes=4,compatible=11.2.0.0.0",
-                                    sampleSchema            => 'TRUE',
-                                    memoryPercentage        => "40",
-                                    memoryTotal             => "800",
-                                    databaseType            => "MULTIPURPOSE",
+  $database_hash  = {'nbcprod' => { # General
+                                    oracleHome     => 'C:\Oracle_Sys\product\11.2.0\db',
+
+                                    # Reponsefile
+                                    globalDbName   => 'nbcprod',
+                                    dbName         => 'nbcprod',
+                                    templateName   => 'ncbprod.dbt',
+                                    sysPassword    => 'Passw0rd',
+                                    systemPassword => 'Passw0rd',
                                   },
                      },
 
-  $net_hash       = {'listener' => { oracleHome   => '/oracle/product/11.2/db',
-                                     version      => '11.2',
-                                     user         => 'oracle',
-                                     group        => 'dba',
-                                     downloadDir  => '/install',
+  $net_hash       = {'listener' => { oracleHome  => '/oracle/product/11.2/db',
+                                     version     => '11.2',
+                                     user        => 'oracle',
+                                     group       => 'dba',
+                                     downloadDir => '/install',
                                    },
                     },
 ) {
