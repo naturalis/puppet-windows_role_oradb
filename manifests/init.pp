@@ -57,7 +57,7 @@ class windows_role_oradb  (
                                     # Reponsefile
                                     globalDbName   => 'nbcprod',
                                     dbName         => 'nbcprod',
-                                    templateName   => 'ncbprod.dbt',
+                                    templateName   => 'nbcprod.dbt',
                                     sysPassword    => 'Passw0rd',
                                     systemPassword => 'Passw0rd',
                                   },
