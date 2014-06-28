@@ -36,13 +36,16 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class windows_role_oradb  (
-  $installdb_hash = {'nbcprod' => { version         => '11.2.0.3',
-                                    oracleHome      => 'C:/Oracle_Sys/nbcprod/product/11.2.0/db',
-                                    oracleBase      => 'C:/Oracle_Sys/nbcprod',
-                                    databaseType    => 'SE',
+  $installdb_hash = {'nbcprod' => { # General parameters
+                                    version         => '11.2.0.3',
                                     #archiveFilename => 'p10404530_112030_MSWIN-x86-64',
                                     installFolder   => 'C:/Install',
                                     zipfilesFolder  => 'C:/Zipfiles',
+
+                                    # Response file parameters
+                                    oracleHome      => 'C:\Oracle_Sys\nbcprod\product\11.2.0\db',
+                                    oracleBase      => 'C:\Oracle_Sys\nbcprod',
+                                    databaseType    => 'SE',
                                   },
                     },
 
