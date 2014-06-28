@@ -77,10 +77,10 @@ class windows_role_oradb  (
     require        => Class['windows_role_base']
   }
 
-  #class {"windows_role_oradb::database":
-  #  database_hash => $database_hash,
-  #  require       => Class['windows_role_oradb::net'],
-  #}
+  class {"windows_role_oradb::database":
+    database_hash => $database_hash,
+    require       => Class['windows_role_oradb::installdb'],
+  }
 
   #class {"windows_role_oradb::net":
   #  net_hash => $net_hash,
