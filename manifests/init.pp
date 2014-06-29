@@ -50,9 +50,9 @@ class windows_role_oradb  (
                     },
 
   $database_hash  = {'nbcprod' => { # General
-                                    oracleHome     => 'C:\Oracle_Sys\product\11.2.0\db',
-				                            version	       => '11.2.0.3',
-                                    installFolder   => 'C:/Install',
+                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2.0\db',
+				                    version	       => '11.2.0.3',
+                                    installFolder  => 'C:/Install',
 
                                     # Reponsefile
                                     globalDbName   => 'nbcprod',
