@@ -37,21 +37,21 @@
 #
 class windows_role_oradb  (
   $installdb_hash = {'nbcprod' => { # General
-                                    version         => '11.2.0.3',
+                                    version        => '11.2.0.3',
                                     #archiveFilename => 'p10404530_112030_MSWIN-x86-64',
-                                    installFolder   => 'C:/Install',
-                                    zipfilesFolder  => 'C:/Zipfiles',
+                                    installFolder  => 'C:/Install',
+                                    zipfilesFolder => 'C:/Zipfiles',
 
                                     # Responsefile
-                                    oracleHome   => 'C:\Oracle_Sys\nbcprod\product\11.2.0\db',
-                                    oracleBase   => 'C:\Oracle_Sys\nbcprod',
-                                    databaseType => 'SE',
+                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
+                                    oracleBase     => 'C:\Oracle_Sys\nbcprod',
+                                    databaseType   => 'SE',
                                   },
                     },
 
   $database_hash  = {'nbcprod' => { # General
-                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2.0\db',
-				                    version	       => '11.2.0.3',
+                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
+				                            version	       => '11.2.0.3',
                                     installFolder  => 'C:/Install',
 
                                     # Reponsefile
@@ -63,11 +63,9 @@ class windows_role_oradb  (
                                   },
                      },
 
-  $net_hash       = {'listener' => { oracleHome  => '/oracle/product/11.2/db',
-                                     version     => '11.2',
-                                     user        => 'oracle',
-                                     group       => 'dba',
-                                     downloadDir => '/install',
+  $net_hash       = {'listener' => { oracleHome  => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
+                                     version     => '11.2.0.3',
+                                     downloadDir => 'C:/Install',
                                    },
                     },
 ) {
