@@ -74,7 +74,7 @@ class windows_role_oradb  (
 
   class {"windows_role_oradb::installdb":
     installdb_hash => $installdb_hash,
-    require        => Class['windows_role_base']
+    require        => Class['windows_role_base'],
   }
 
   class {"windows_role_oradb::database":
