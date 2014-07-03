@@ -43,14 +43,14 @@ class windows_role_oradb  (
                                     zipfilesFolder => 'C:/Zipfiles',
 
                                     # Responsefile
-                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
-                                    oracleBase     => 'C:\Oracle_Sys\nbcprod',
+                                    oracleHome     => 'C:\Oracle_Sys1\nbcprod\product\11.2\db',
+                                    oracleBase     => 'C:\Oracle_Sys1\nbcprod',
                                     databaseType   => 'SE',
                                   },
                     },
 
   $database_hash  = {'nbcprod' => { # General
-                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
+                                    oracleHome     => 'C:\Oracle_Sys1\nbcprod\product\11.2\db',
                                     version        => '11.2.0.3',
                                     installFolder  => 'C:/Install',
 
@@ -70,11 +70,16 @@ class windows_role_oradb  (
                     },
 ) {
 
-  class {"windows_role_base":}
+  stage {'pre':}
 
+  Stage['pre'] -> Stage['main']
+
+  class {"windows_role_base":
+  stage => 'pre',
+  }
+  
   class {"windows_role_oradb::installdb":
     installdb_hash => $installdb_hash,
-    require        => Class['windows_role_base'],
   }
 
   class {"windows_role_oradb::database":
