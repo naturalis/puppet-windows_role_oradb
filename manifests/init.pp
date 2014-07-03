@@ -43,14 +43,14 @@ class windows_role_oradb  (
                                     zipfilesFolder => 'C:/Zipfiles',
 
                                     # Responsefile
-                                    oracleHome     => 'C:\Oracle_Sys1\nbcprod\product\11.2\db',
-                                    oracleBase     => 'C:\Oracle_Sys1\nbcprod',
+                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
+                                    oracleBase     => 'C:\Oracle_Sys\nbcprod',
                                     databaseType   => 'SE',
                                   },
                     },
 
   $database_hash  = {'nbcprod' => { # General
-                                    oracleHome     => 'C:\Oracle_Sys1\nbcprod\product\11.2\db',
+                                    oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
                                     version        => '11.2.0.3',
                                     installFolder  => 'C:/Install',
 
