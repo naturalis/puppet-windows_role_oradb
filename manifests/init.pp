@@ -51,6 +51,7 @@ class windows_role_oradb  (
 
   $database_hash  = {'nbcprod' => { # General
                                     oracleHome     => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
+                                    oracleBase     => 'C:\Oracle_Sys\nbcprod',
                                     version        => '11.2.0.3',
                                     installFolder  => 'C:/Install',
 
