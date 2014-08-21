@@ -89,9 +89,17 @@ class windows_role_oradb  (
     require       => Class['windows_role_oradb::installdb'],
   }
 
+  host { $::fqdn:
+    ensure       => 'present',
+    host_aliases => [$::hostname, 'localhost'],
+    ip           => $::ipaddress,
+    #target      => '/etc/hosts',
+  }
+
   class {"windows_role_oradb::net":
     net_hash => $net_hash,
-    require  => Class['windows_role_oradb::database'],
+    require  => [Host[$::fqdn],
+                 Class['windows_role_oradb::database']],
   }
 
 }
