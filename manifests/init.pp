@@ -64,11 +64,11 @@ class windows_role_oradb  (
                                   },
                      },
 
-  $net_hash       = {'listener' => { oracleHome    => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
-                                     oracleBase    => 'C:\Oracle_Sys\nbcprod',
-                                     version       => '11.2.0.3',
-                                     installFolder => 'C:/Install',
-                                   },
+  $net_hash       = {'listener_nbcprod' => { oracleHome    => 'C:\Oracle_Sys\nbcprod\product\11.2\db',
+                                             oracleBase    => 'C:\Oracle_Sys\nbcprod',
+                                             version       => '11.2.0.3',
+                                             installFolder => 'C:/Install',
+                                           },
                     },
 ) {
 
