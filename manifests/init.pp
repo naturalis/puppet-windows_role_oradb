@@ -93,7 +93,6 @@ class windows_role_oradb  (
     ensure       => 'present',
     host_aliases => [$::hostname, 'localhost'],
     ip           => $::ipaddress,
-    #target      => '/etc/hosts',
   }
 
   class {"windows_role_oradb::net":
