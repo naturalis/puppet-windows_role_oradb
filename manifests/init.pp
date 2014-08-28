@@ -68,7 +68,7 @@ class windows_role_oradb  (
                                              oracleBase         => 'C:\Oracle_Sys\nbcprod',
                                              version            => '11.2.0.3',
                                              installFolder      => 'C:/Install',
-                                             $listenerProtocols => 'TCP;1522',
+                                             $listenerProtocols => 'TCP;1523',
                                            },
                     },
 ) {
