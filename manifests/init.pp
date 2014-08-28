@@ -68,7 +68,7 @@ class windows_role_oradb  (
                                              oracleBase        => 'C:\Oracle_Sys\nbcprod',
                                              version           => '11.2.0.3',
                                              installFolder     => 'C:/Install',
-                                             installType       => 'custom', # "typical","minimal" or "custom"
+                                             installType       => 'custom', # "typical","minimal" or "custom", set to custom if using port other than 1521
                                              listenerProtocols => 'TCP;1523',
                                              nsnProtocols      => 'TCP;HOSTNAME;1523',
                                            },
