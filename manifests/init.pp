@@ -83,7 +83,7 @@ class windows_role_oradb  (
   Stage['pre'] -> Stage['main']
 
   class {"windows_role_base":
-  stage => 'pre',
+    stage => 'pre',
   }
   
   class {"windows_role_oradb::installdb":
