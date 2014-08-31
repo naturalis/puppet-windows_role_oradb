@@ -77,7 +77,8 @@ class windows_role_oradb  (
                     },
 ) {
 
-  stage {'pre':}
+  stage {'pre':
+  }
 
   Stage['pre'] -> Stage['main']
 
@@ -94,10 +95,9 @@ class windows_role_oradb  (
     require       => Class['windows_role_oradb::installdb'],
   }
 
-  #class {"windows_role_oradb::net":
-  #  net_hash => $net_hash,
-  #  require  => [Host[$::fqdn],
-  #               Class['windows_role_oradb::database']],
-  #}
+  class {"windows_role_oradb::net":
+    net_hash => $net_hash,
+    require  => Class['windows_role_oradb::database'],
+  }
 
 }
