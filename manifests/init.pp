@@ -72,7 +72,8 @@ class windows_role_oradb  (
                                              # Reponsefile
                                              installType       => 'custom', # "typical","minimal" or "custom", set to custom if using port other than 1521
                                              listenerProtocols => 'TCP;1523',
-                                             nsnProtocols      => 'TCP;HOSTNAME;1523',
+                                             nsnProtocol       => 'TCP',
+                                             nsnPort           => '1523',
                                            },
                     },
 ) {
