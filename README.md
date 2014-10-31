@@ -38,16 +38,11 @@ management, etc.) this is the time to mention it.
 
 ### Setup Requirements **OPTIONAL**
 
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
+windows_role_base
 
 ### Beginning with windows_role_oradb
 
-The very basic steps needed for a user to get the module up and running.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+Create two folders C:/Install and C:/Zipfiles. Download software from Oracle, put .zip files in c:\Zipfiles. Then apply this module.
 
 ## Usage
 
@@ -63,7 +58,7 @@ with things. (We are working on automating this section!)
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Tested with Windows 2008 R2
 
 ## Development
 
