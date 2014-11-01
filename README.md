@@ -15,7 +15,7 @@
 
 ## Overview
 
-Module to deploy Oracle DB on Windows. This modules contains userdata. Use is with module puppet-oradb.
+Module to deploy Oracle DB on Windows. This modules contains userdata. Use is with module puppet-oradb. After deployment you must register the listeners: sqlplus> alter system set local_listener=${title} scope=both;.
 
 ## Module Description
 
