@@ -41,4 +41,10 @@ class windows_role_oradb (
   $windows_oradb::net_hash       = undef,
   ) {
 
+  class { 'windows_oradb':
+    windows_oradb::installdb_hash => $windows_oradb::installdb_hash,
+    windows_oradb::database_hash  => $windows_oradb::database_hash,
+    windows_oradb::net_hash       => $windows_oradb::net_hash,
+  }
+
 }
