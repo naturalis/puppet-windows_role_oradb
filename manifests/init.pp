@@ -36,6 +36,9 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class windows_role_oradb (
+  $windows_oradb::installdb_hash = undef,
+  $windows_oradb::database_hash  = undef,
+  $windows_oradb::net_hash       = undef,
   ) {
 
 }
